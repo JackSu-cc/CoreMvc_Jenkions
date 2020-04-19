@@ -87,11 +87,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Core\\AllCoreDemo\\CoreDemo\\CoreMvc\\CoreMvc.csproj",
+      "projectUniqueName": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\CoreMvc\\CoreMvc.csproj",
       "projectName": "CoreMvc",
-      "projectPath": "E:\\Core\\AllCoreDemo\\CoreDemo\\CoreMvc\\CoreMvc.csproj",
+      "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\CoreMvc\\CoreMvc.csproj",
       "packagesPath": "C:\\Users\\cc\\.nuget\\packages\\",
-      "outputPath": "E:\\Core\\AllCoreDemo\\CoreDemo\\CoreMvc\\obj\\",
+      "outputPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\CoreMvc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -133,6 +133,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -141,7 +159,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
