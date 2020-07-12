@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200627153809_Init.cs" />
+    <Compile Remove="Migrations\20200627153809_Init.Designer.cs" />
+    <Compile Remove="Migrations\20200628142520_Init.cs" />
+    <Compile Remove="Migrations\20200628142520_Init.Designer.cs" />
+    <Compile Remove="Migrations\20200628143211_Init.cs" />
+    <Compile Remove="Migrations\20200628143211_Init.Designer.cs" />
+    <Compile Remove="Migrations\20200628144032_Init.cs" />
+    <Compile Remove="Migrations\20200628144032_Init.Designer.cs" />
+    <Compile Remove="Migrations\20200628151031_Initial.cs" />
+    <Compile Remove="Migrations\20200628151031_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200628151259_Initial.cs" />
+    <Compile Remove="Migrations\20200628151259_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200628152217_增加有效字段.cs" />
+    <Compile Remove="Migrations\20200628152217_增加有效字段.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DoMain\Domain.csproj" />
+  </ItemGroup>
+
+</Project>

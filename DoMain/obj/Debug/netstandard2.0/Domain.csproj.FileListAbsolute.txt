@@ -1,0 +1,11 @@
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Domain.deps.json
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Domain.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Domain.pdb
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Common.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Common.pdb
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.csproj.CopyComplete
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.pdb

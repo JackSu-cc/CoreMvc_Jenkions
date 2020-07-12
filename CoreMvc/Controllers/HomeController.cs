@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CoreMvc.Models;
+using Application.IService.IUserService;
+using Application.ViewModel;
 
 namespace CoreMvc.Controllers
 {
@@ -13,14 +15,26 @@ namespace CoreMvc.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IUserService _userService;
+        public HomeController(ILogger<HomeController> logger, IUserService userService)
         {
             _logger = logger;
+            this._userService = userService;
         }
 
         public IActionResult Index()
         {
-            return View();
+            UserInfoVM user = new UserInfoVM()
+            {
+                UserCode = "cc",
+                UserName = "cc",
+                Email = "929013002@qq.com",
+                Password = "kong23.cncncn"
+            };
+
+            _userService.AddUser(user);
+
+            return View(_userService.FindUserInfo(1));
         }
 
         public IActionResult Privacy()

@@ -19,13 +19,13 @@
 #COPY --from=publish /app/publish .
 #ENTRYPOINT ["dotnet", "CoreMvc.dll"]
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim AS base　　 
-MAINTAINER cc   
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim AS base
+MAINTAINER cc
 
 #LABEL description="this is a test website"　　 
 #LABEL version="1.0"  
 
-WORKDIR /root/CoreMvc/ 　　 
-COPY . . 　　　　 
+WORKDIR /root/CoreMvc/
+COPY . .
 EXPOSE 5000
-ENTRYPOINT ["dotnet", "CoreMvc.dll"]　　　
+ENTRYPOINT ["dotnet", "CoreMvc.dll"]

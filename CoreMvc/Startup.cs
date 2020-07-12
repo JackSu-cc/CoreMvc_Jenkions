@@ -2,9 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.IService.IUserService;
+using Application.Service.UserService;
+using Common.BaseInterfaces.IBaseRepository;
+using Common.BaseInterfaces.IBaseRepository.IRepository;
+using Domain.IRepository;
+using Infrastruct.Context;
+using Infrastruct.Repository.BaseRepository;
+using Infrastruct.Repository.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,7 +32,20 @@ namespace CoreMvc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
             services.AddControllersWithViews();
+            services.AddDbContext<CoreDemoDBContext>(o =>
+            {
+                o.UseSqlServer(Configuration.GetSection("ConnectionStrings:Default").Value);
+            });
+            //services.AddTransient<>
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            //×¢Èë²Ö´¢
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,7 +61,7 @@ namespace CoreMvc
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-           // app.UseHttpsRedirection();
+            // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
