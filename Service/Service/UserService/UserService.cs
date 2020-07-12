@@ -49,7 +49,7 @@ namespace Application.Service.UserService
         {
             var model = _userRepository.Find(Id);
             if (model != null)
-            {
+            { 
                 return new UserInfoVM()
                 {
                     ID = model.ID,
