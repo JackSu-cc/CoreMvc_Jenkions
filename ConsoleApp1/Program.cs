@@ -1,10 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ConsoleApp1
 {
+    public static class Stuant
+    {
+        public static int Pss(this object s)
+        {
+            return 1;
+        }
+         
+    }
     class Program
     {
+
         static void Main(string[] args)
         {
             //  string dd = "abcadddd";
@@ -30,9 +40,21 @@ namespace ConsoleApp1
             audi.Run();
             audi.ShowResult();
 
+            string dd = "";
+            int dds = dd.Pss();
+
+             
+
+            List<AAA> list = new List<AAA>();
+            list.Add(new AAA { Name = "" });
+            list.Where(c=>c.Name.Contains("ss"));
+         
 
             Console.WriteLine("Hello World!");
         }
+
+
+
 
         public class Action
         {
@@ -41,41 +63,41 @@ namespace ConsoleApp1
                 Console.WriteLine("{0} is running.", vehicle.ToString());
             }
         }
-            public class Vehicle
+        public class Vehicle
+        {
+            private string name;
+            private int speed;
+            private string[] array = new string[10];
+
+            public Vehicle()
             {
-                private string name;
-                private int speed;
-                private string[] array = new string[10];
-
-                public Vehicle()
-                {
-                }
-
-                //限定被相似的名称隐藏的成员
-                public Vehicle(string name, int speed)
-                {
-                    this.name = name;
-                    this.speed = speed;
-                }
-
-                public virtual void ShowResult()
-                {
-                    Console.WriteLine("The top speed of {0} is {1}.", name, speed);
-                }
-
-                public void Run()
-                {
-                    //传递当前实例参数
-                    Action.ToRun(this);
-                }
-                //声明索引器，必须为this，这样就可以像数组一样来索引对象
-                public string this[int param]
-                {
-                    get { return array[param]; }
-                    set { array[param] = value; }
-                }
             }
-        
+
+            //限定被相似的名称隐藏的成员
+            public Vehicle(string name, int speed)
+            {
+                this.name = name;
+                this.speed = speed;
+            }
+
+            public virtual void ShowResult()
+            {
+                Console.WriteLine("The top speed of {0} is {1}.", name, speed);
+            }
+
+            public void Run()
+            {
+                //传递当前实例参数
+                Action.ToRun(this);
+            }
+            //声明索引器，必须为this，这样就可以像数组一样来索引对象
+            public string this[int param]
+            {
+                get { return array[param]; }
+                set { array[param] = value; }
+            }
+        }
+
 
 
         public class Car : Vehicle
@@ -118,5 +140,13 @@ namespace ConsoleApp1
                 Console.WriteLine("It's audi's result.");
             }
         }
+
+
     }
+
+    public class AAA { 
+       public string Name { get; set; }
+    }
+
+
 }
