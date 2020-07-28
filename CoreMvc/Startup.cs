@@ -64,6 +64,7 @@ namespace CoreMvc
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseMiddleware<Middleware>();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -75,5 +76,7 @@ namespace CoreMvc
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+
     }
+ 
 }

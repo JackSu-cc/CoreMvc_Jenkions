@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace ConsoleApp1
 {
@@ -10,7 +11,7 @@ namespace ConsoleApp1
         {
             return 1;
         }
-         
+
     }
     class Program
     {
@@ -43,18 +44,29 @@ namespace ConsoleApp1
             string dd = "";
             int dds = dd.Pss();
 
-             
+
 
             List<AAA> list = new List<AAA>();
             list.Add(new AAA { Name = "" });
-            list.Where(c=>c.Name.Contains("ss"));
-         
+
+            list.Where(c => c.Name.Contains("ss"));
+
 
             Console.WriteLine("Hello World!");
         }
 
+        public bool dd(int i, Func<string,bool> func)
+        {
+            int ss = i++;
+            func = dssss;
+            
+            return func("ssa");
 
-
+        }
+        public bool dssss(string ds)
+        {
+            return true;
+        }
 
         public class Action
         {
@@ -144,8 +156,9 @@ namespace ConsoleApp1
 
     }
 
-    public class AAA { 
-       public string Name { get; set; }
+    public class AAA
+    {
+        public string Name { get; set; }
     }
 
 
