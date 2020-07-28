@@ -9,3 +9,15 @@ E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.Assemb
 E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.csproj.CopyComplete
 E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.dll
 E:\Core\GIT学习\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.pdb
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Domain.deps.json
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Domain.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Domain.pdb
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Common.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\bin\Debug\netstandard2.0\Common.pdb
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.csproj.CopyComplete
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\DoMain\obj\Debug\netstandard2.0\Domain.pdb

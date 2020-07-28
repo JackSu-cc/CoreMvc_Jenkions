@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "d5p3LUEy/o6GsqPp1CQbkLU16A36anlgf1aWVU6zguBMRoH9lVQmn4lTqzwLvqnwaOGWS3VQC7H4URbZz2HfGw==",
+  "success": true,
+  "projectFilePath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

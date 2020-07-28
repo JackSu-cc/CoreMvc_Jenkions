@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
+using System.Net.Http.Headers;
 
 namespace ConsoleApp1
 {
@@ -11,7 +11,7 @@ namespace ConsoleApp1
         {
             return 1;
         }
-
+         
     }
     class Program
     {
@@ -44,29 +44,41 @@ namespace ConsoleApp1
             string dd = "";
             int dds = dd.Pss();
 
-
+             
 
             List<AAA> list = new List<AAA>();
             list.Add(new AAA { Name = "" });
-
-            list.Where(c => c.Name.Contains("ss"));
-
+            list.Where(c=>c.Name.Contains("ss"));
+         
 
             Console.WriteLine("Hello World!");
+
+            //数据类型 float参数后面必须是加 f  不然编译不过去，会被编译器认为是 double
+            // decimal 类型如果直接赋值必须加 m  不然编译不过去，会被编译器认为是 double
+            float a = 3.2f;
+            decimal b = 3.2m;
+
+            //float 精度不足，会丢失位数
+            int a1 = 10000001;
+            float a2 = a1; //变成 1E+80 //丢失 1
+            int a3 = (int)a2;// 变成1000000
+
+            //整数类型没有自己的操作符   byte sbyte ushort short
+            short s1 = 1;
+            short s2 = 2;
+            short s3 = (short)(s1 + s2);
+
+            int i = 0;
+            Console.WriteLine(i++);
+            Console.WriteLine(++i);
+             
         }
 
-        public bool dd(int i, Func<string,bool> func)
-        {
-            int ss = i++;
-            func = dssss;
-            
-            return func("ssa");
+        public class dd<T>
+        { 
+         
+        }
 
-        }
-        public bool dssss(string ds)
-        {
-            return true;
-        }
 
         public class Action
         {
@@ -156,9 +168,8 @@ namespace ConsoleApp1
 
     }
 
-    public class AAA
-    {
-        public string Name { get; set; }
+    public class AAA { 
+       public string Name { get; set; }
     }
 
 
