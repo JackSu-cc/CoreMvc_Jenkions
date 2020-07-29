@@ -24,6 +24,13 @@ namespace CoreMvc.Controllers
 
         public IActionResult Index()
         {
+          
+
+            return View();
+        }
+
+        public void Add()
+        {
             UserInfoVM user = new UserInfoVM()
             {
                 UserCode = "cc",
@@ -33,8 +40,6 @@ namespace CoreMvc.Controllers
             };
 
             _userService.AddUser(user);
-
-            return View(_userService.FindUserInfo(1));
         }
 
         public IActionResult Privacy()

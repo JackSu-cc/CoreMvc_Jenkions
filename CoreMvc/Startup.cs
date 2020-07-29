@@ -12,6 +12,7 @@ using Infrastruct.Repository.BaseRepository;
 using Infrastruct.Repository.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -61,6 +62,7 @@ namespace CoreMvc
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -68,12 +70,30 @@ namespace CoreMvc
 
             app.UseAuthorization();
 
+            app.Use(async (context, next) =>
+            {
+                await context.Response.WriteAsync("<p>假如这个是最后一个啊</p>");
+                await next.Invoke();//不加这个，不会执行下一个中间件
+
+            });
+
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("<p>最后一个啊</p>");
+            });
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("<p>真的是最后一个啊</p>");
+            });
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+
         }
     }
 }
