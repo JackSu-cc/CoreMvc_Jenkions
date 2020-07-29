@@ -80,26 +80,29 @@ namespace CoreMvc
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseMiddleware<Middleware>();
+           
             app.UseRouting();
 
             app.UseAuthorization();
 
+            #region 自定义中间件，学习
+            //自定义中间件>>方式1
+            app.UseMiddleware<Middleware>();
+
+            //自定义中间件>>方式2
             app.Use(async (context, next) =>
             {
                 await context.Response.WriteAsync("<p>假如这个是最后一个啊</p>");
                 await next.Invoke();//不加这个，不会执行下一个中间件
 
             });
-
+            //自定义中间件>>方式3
             app.Run(async context =>
             {
                 await context.Response.WriteAsync("<p>最后一个啊</p>");
             });
-            app.Run(async context =>
-            {
-                await context.Response.WriteAsync("<p>真的是最后一个啊</p>");
-            });
+           
+            #endregion
 
             app.UseEndpoints(endpoints =>
             {
