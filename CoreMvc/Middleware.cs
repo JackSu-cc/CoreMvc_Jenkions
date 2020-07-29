@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CoreMvc
 {
+    /// <summary>
+    /// 实现自定义的中间件
+    /// </summary>
     public class Middleware
     {
         private readonly RequestDelegate _next;
