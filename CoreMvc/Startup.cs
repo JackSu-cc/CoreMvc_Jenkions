@@ -33,13 +33,24 @@ namespace CoreMvc
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            #region 配置跨域请求
+            var urls = Configuration.GetSection("Cors:AllowOrigins").Value.Split(',');
+            services.AddCors(option => option.AddPolicy("cors",
+                policy =>
+                policy
+                      .WithOrigins(urls)//配置允许请求的站点
+                      .AllowAnyHeader()//允许所有请求头
+                      .AllowAnyMethod()//允许请求类型
+                      .AllowCredentials()//允许携带cookie信息（这个要禁用掉）
+                      ));
+            #endregion
 
             services.AddControllersWithViews();
             services.AddDbContext<CoreDemoDBContext>(o =>
             {
                 o.UseSqlServer(Configuration.GetSection("ConnectionStrings:Default").Value);
             });
+
             //services.AddTransient<>
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IUserRepository, UserRepository>();
@@ -63,9 +74,13 @@ namespace CoreMvc
                 app.UseHsts();
             }
 
+            //执行跨域请求的中间件，cors为自定义的跨域请求策略
+            app.UseCors("cors");
+
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseMiddleware<Middleware>();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -95,5 +110,7 @@ namespace CoreMvc
 
 
         }
+
     }
+
 }
