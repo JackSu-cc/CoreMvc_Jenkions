@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -11,7 +13,7 @@ namespace ConsoleApp1
         {
             return 1;
         }
-         
+
     }
     class Program
     {
@@ -44,12 +46,12 @@ namespace ConsoleApp1
             string dd = "";
             int dds = dd.Pss();
 
-             
+
 
             List<AAA> list = new List<AAA>();
             list.Add(new AAA { Name = "" });
-            list.Where(c=>c.Name.Contains("ss"));
-         
+            list.Where(c => c.Name.Contains("ss"));
+
 
             Console.WriteLine("Hello World!");
 
@@ -71,12 +73,38 @@ namespace ConsoleApp1
             int i = 0;
             Console.WriteLine(i++);
             Console.WriteLine(++i);
-             
+
+            Console.WriteLine("await外面的前面");
+
+            Getasync();
+
+            Console.WriteLine("await外面的后面");
+            Console.ReadKey();
+        }
+        public static async void Getasync()
+        {
+            int tt = 0;
+            Console.WriteLine("await后面{0}", tt);
+            tt = await Task.Run(() =>
+               {
+
+                   for (int i = 0; i < 5; i++)
+                   {
+                       Thread.Sleep(1000);
+                       tt = tt + i;
+                   }
+                   return tt;
+               });
+            Console.WriteLine("await后面");
+            Console.WriteLine("await后面{0}", tt);
+
+
         }
 
         public class dd<T>
-        { 
-         
+        {
+
+
         }
 
 
@@ -168,8 +196,9 @@ namespace ConsoleApp1
 
     }
 
-    public class AAA { 
-       public string Name { get; set; }
+    public class AAA
+    {
+        public string Name { get; set; }
     }
 
 

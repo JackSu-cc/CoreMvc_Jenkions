@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using CoreMvc.Models;
 using Application.IService.IUserService;
 using Application.ViewModel;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CoreMvc.Controllers
 {
@@ -24,7 +25,8 @@ namespace CoreMvc.Controllers
 
         public IActionResult Index()
         {
-          
+           
+            
 
             return View();
         }
