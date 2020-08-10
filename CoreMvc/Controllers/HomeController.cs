@@ -24,8 +24,9 @@ namespace CoreMvc.Controllers
 
         public IActionResult Index()
         {
-          
-
+             
+            Random dd = new Random();
+            
             return View();
         }
 
