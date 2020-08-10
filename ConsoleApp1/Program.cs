@@ -36,6 +36,32 @@ namespace ConsoleApp1
             //  }
             //var ss=  max;
 
+            #region 深复制，浅复制
+            string aa = "sdf";
+            string dd12 = null;
+            Console.WriteLine(aa);
+            Console.WriteLine(dd12);
+            dd12 = aa;
+            Console.WriteLine(dd12);
+            dd12 = "aaa";
+            Console.WriteLine(aa);
+            Console.WriteLine(dd12);
+
+            user u1 = new user()
+            {
+                name = "原始的"
+            };
+            Console.WriteLine(u1.name);
+            user u2 = u1;
+            Console.WriteLine(u2.name);
+            u2.name = "第一次浅复制";
+            Console.WriteLine(u1.name);
+            Console.WriteLine(u2.name);
+             
+            #endregion
+
+
+
             Audi audi = new Audi();
             audi[1] = "A6";
             audi[2] = "A8";
@@ -101,10 +127,9 @@ namespace ConsoleApp1
 
         }
 
-        public class dd<T>
+        public class user
         {
-
-
+            public string name { get; set; }
         }
 
 
