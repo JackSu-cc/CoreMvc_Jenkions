@@ -20,6 +20,28 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
+            var len = 9;
+            string st;
+            for (var i = 1; i <= len; i++)
+            {
+                st = "";
+                for (var j = 1; j <= i; j++)
+                {
+                    if (j == i)
+                    {
+                        st += $"{j}*{i}={i * j}";
+                        
+                        break;
+                    } 
+                    else
+                    {
+                        st += $"{j}*{i}={i * j}\t";
+                    }
+                }
+                Console.WriteLine(st);
+            }
+
+
             //  string dd = "abcadddd";
 
             //  List<char> li = new List<char>();
@@ -57,7 +79,7 @@ namespace ConsoleApp1
             u2.name = "第一次浅复制";
             Console.WriteLine(u1.name);
             Console.WriteLine(u2.name);
-             
+
             #endregion
 
 
@@ -96,9 +118,9 @@ namespace ConsoleApp1
             short s2 = 2;
             short s3 = (short)(s1 + s2);
 
-            int i = 0;
-            Console.WriteLine(i++);
-            Console.WriteLine(++i);
+            int i1 = 0;
+            Console.WriteLine(i1++);
+            Console.WriteLine(++i1);
 
             Console.WriteLine("await外面的前面");
 

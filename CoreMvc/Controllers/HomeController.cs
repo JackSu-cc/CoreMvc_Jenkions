@@ -40,7 +40,7 @@ namespace CoreMvc.Controllers
                 Password = "kong23.cncncn"
             };
 
-            _userService.AddUser(user);
+           // _userService.AddUser(user);
         }
 
         public IActionResult Privacy()
