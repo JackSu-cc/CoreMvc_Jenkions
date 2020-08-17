@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http.Headers;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
@@ -20,6 +22,28 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
+            var len = 9;
+            string st;
+            for (var i = 1; i <= len; i++)
+            {
+                st = "";
+                for (var j = 1; j <= i; j++)
+                {
+                    if (j == i)
+                    {
+                        st += $"{j}*{i}={i * j}";
+                        
+                        break;
+                    } 
+                    else
+                    {
+                        st += $"{j}*{i}={i * j}\t";
+                    }
+                }
+                Console.WriteLine(st);
+            }
+
+
             List<string> listA = new List<string> { "a", "b", "c", "d", "e" };
 
             List<string> listB = new List<string> { "a", "b", "f" };
@@ -56,6 +80,32 @@ namespace ConsoleApp1
             //  }
             //var ss=  max;
 
+            #region 深复制，浅复制
+            string aa = "sdf";
+            string dd12 = null;
+            Console.WriteLine(aa);
+            Console.WriteLine(dd12);
+            dd12 = aa;
+            Console.WriteLine(dd12);
+            dd12 = "aaa";
+            Console.WriteLine(aa);
+            Console.WriteLine(dd12);
+
+            user u1 = new user()
+            {
+                name = "原始的"
+            };
+            Console.WriteLine(u1.name);
+            user u2 = u1;
+            Console.WriteLine(u2.name);
+            u2.name = "第一次浅复制";
+            Console.WriteLine(u1.name);
+            Console.WriteLine(u2.name);
+
+            #endregion
+
+
+
             Audi audi = new Audi();
             audi[1] = "A6";
             audi[2] = "A8";
@@ -90,15 +140,40 @@ namespace ConsoleApp1
             short s2 = 2;
             short s3 = (short)(s1 + s2);
 
-            int i = 0;
-            Console.WriteLine(i++);
-            Console.WriteLine(++i);
+            int i1 = 0;
+            Console.WriteLine(i1++);
+            Console.WriteLine(++i1);
+
+            Console.WriteLine("await外面的前面");
+
+            Getasync();
+
+            Console.WriteLine("await外面的后面");
+            Console.ReadKey();
+        }
+        public static async void Getasync()
+        {
+            int tt = 0;
+            Console.WriteLine("await后面{0}", tt);
+            tt = await Task.Run(() =>
+               {
+
+                   for (int i = 0; i < 5; i++)
+                   {
+                       Thread.Sleep(1000);
+                       tt = tt + i;
+                   }
+                   return tt;
+               });
+            Console.WriteLine("await后面");
+            Console.WriteLine("await后面{0}", tt);
+
 
         }
 
-        public class dd<T>
+        public class user
         {
-
+            public string name { get; set; }
         }
 
 

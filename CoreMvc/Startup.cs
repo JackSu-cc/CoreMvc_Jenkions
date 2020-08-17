@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -50,6 +51,8 @@ namespace CoreMvc
             {
                 o.UseSqlServer(Configuration.GetSection("ConnectionStrings:Default").Value);
             });
+            //注入缓存
+            services.AddSingleton<IMemoryCache, MemoryCache>();
 
             //services.AddTransient<>
             services.AddScoped<IUserService, UserService>();
@@ -80,7 +83,7 @@ namespace CoreMvc
             // app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-           
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -101,7 +104,7 @@ namespace CoreMvc
             {
                 await context.Response.WriteAsync("<p>最后一个啊</p>");
             });
-           
+
             #endregion
 
             app.UseEndpoints(endpoints =>
