@@ -1,3 +1,16 @@
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.deps.json
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.pdb
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Common.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Domain.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Domain.pdb
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Common.pdb
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.csprojAssemblyReference.cache
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.AssemblyInfoInputs.cache
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.AssemblyInfo.cs
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.csproj.CopyComplete
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.pdb
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.deps.json
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.pdb
@@ -12,16 +25,3 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.csproj.CopyComplete
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.pdb
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.deps.json
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.dll
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Application.pdb
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Common.dll
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Domain.dll
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Domain.pdb
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\bin\Debug\netstandard2.0\Common.pdb
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.csprojAssemblyReference.cache
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.AssemblyInfoInputs.cache
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.AssemblyInfo.cs
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.csproj.CopyComplete
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.dll
-E:\Core\GIT学习\CoreMvc_Jenkions\Service\obj\Debug\netstandard2.0\Application.pdb

@@ -49,4 +49,48 @@
 
    两个类型的互相转换即为：装箱/拆箱，同类型的转换不算装箱/拆箱
 
-4. 
+4. 面向对象：封装（内部实现细节与外部展示分开） 继承 多态
+
+   C#共同基类 Object
+
+   类与接口   class和Interface 
+
+   类型安全：
+
+    静态类型：Static Typing
+
+    动态类型：dynamic
+
+    强类型： Strongly Typed language
+
+   内存管理：CLR 公共语言运行时   GC 自动垃圾回收
+
+   隐式转换：编译器保证信息不回丢失 .。比如：int转换为long类型，
+
+   显示转换：编译器不能保证信息会丢失。比如：long转换为int类型，（因为long比int长）
+
+   Using static system  这样的引用方式 表明 system下所有的静态成员不需要 写前面部分直接使用
+
+   方法签名：就是指方法的名字，或者方法参数的名字
+
+   泛型：
+
+   where T ：base-class 某个父类的子类
+
+   where T ：interface    实现了接口
+
+   where T ：Class          必须是class类型
+
+   where T ：Struct         值类型
+
+   where T ：new()         必须有一个无参构造函数
+
+   where u ：T                U继承T函数
+
+   协变 ：当一个值作为返回值out   public Interface IEnumerable<out T>
+
+   逆变 ：当值作为输入                    public delegate void Action<in T>
+
+   不变 ：当值作为输入又作为输出   public Interface  IList<T>
+
+   Task 使用的线程池，主线程结束后，子线程就已经结束了。

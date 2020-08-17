@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http.Headers;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,11 +18,19 @@ namespace ConsoleApp1
         }
 
     }
+    public static class test2
+    {
+        public static IEnumerable<T> Where2<T>(this IEnumerable<T> succ, Func<T, bool> func)
+        {
+            return null;
+        }
+    }
     class Program
     {
 
         static void Main(string[] args)
         {
+            #region 九九乘法表
             var len = 9;
             string st;
             for (var i = 1; i <= len; i++)
@@ -32,9 +41,9 @@ namespace ConsoleApp1
                     if (j == i)
                     {
                         st += $"{j}*{i}={i * j}";
-                        
+
                         break;
-                    } 
+                    }
                     else
                     {
                         st += $"{j}*{i}={i * j}\t";
@@ -42,43 +51,37 @@ namespace ConsoleApp1
                 }
                 Console.WriteLine(st);
             }
+            #endregion
 
+            #region Lambda Except:listB排除 listA与listB的共有的
 
             List<string> listA = new List<string> { "a", "b", "c", "d", "e" };
 
             List<string> listB = new List<string> { "a", "b", "f" };
 
-            var str3 = listB.ToArray().Except(listA.ToArray()).Any();
+            var str3 = listB.Except(listA).Any();
 
             Console.WriteLine(str3);
-            string expression = "@IsHighRisk=0&&@YearCost<1000000&&((@IsBack=1&&@TCV<50000)||@IsBack=0)";
+            #endregion
 
-            expression = expression
-                .Replace("@IsHighRisk", "0")
-                .Replace("@YearCost", "100")
-                .Replace("@IsBack", "1")
-                 .Replace("@TCV", "10");
+            #region 一个字符串，不重复的字母最大值 “abcadddd”中不重复的 bcad
+            string ddmax = "abcadddd";
 
+            List<char> li = new List<char>();
+            int n = ddmax.Length;
+            int max = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (li.Contains(ddmax[i]))
+                {
+                    li.RemoveRange(0, li.IndexOf(ddmax[i]) + 1);
+                }
+                li.Add(ddmax[i]);
+                max = li.Count > max ? li.Count : max;
+            }
+            Console.WriteLine(max);
 
-
-            object result = new DataTable().Compute(expression, "");
-            Console.WriteLine(float.Parse(result + ""));
-
-            //  string dd = "abcadddd";
-
-            //  List<char> li = new List<char>();
-            //  int n = dd.Length;
-            //  int max = 0;
-            //  for (int i = 0; i < n; i++)
-            //  {
-            //      if (li.Contains(dd[i]))
-            //      {
-            //          li.RemoveRange(0,li.IndexOf(dd[i])+1);
-            //      }
-            //      li.Add(dd[i]);
-            //      max = li.Count > max ? li.Count : max;
-            //  }
-            //var ss=  max;
+            #endregion
 
             #region 深复制，浅复制
             string aa = "sdf";
@@ -117,11 +120,12 @@ namespace ConsoleApp1
             int dds = dd.Pss();
 
 
-
+            
             List<AAA> list = new List<AAA>();
             list.Add(new AAA { Name = "" });
             list.Where(c => c.Name.Contains("ss"));
-
+       
+             
 
             Console.WriteLine("Hello World!");
 
@@ -261,15 +265,15 @@ namespace ConsoleApp1
                 Console.WriteLine("It's audi's result.");
             }
         }
-
-
     }
+
 
     public class AAA
     {
         public string Name { get; set; }
     }
 
+  
 
 
 

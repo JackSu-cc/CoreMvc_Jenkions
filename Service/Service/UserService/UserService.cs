@@ -47,6 +47,7 @@ namespace Application.Service.UserService
         /// <returns></returns>
         public UserInfoVM FindUserInfo(long Id)
         {
+             
             var model = _userRepository.Find(Id);
             if (model != null)
             { 

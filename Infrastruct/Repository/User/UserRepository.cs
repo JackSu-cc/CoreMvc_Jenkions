@@ -32,8 +32,6 @@ namespace Infrastruct.Repository.User
     {
         public UserRepository(CoreDemoDBContext context) : base(context)
         {
-
         }
-         
     }
 }
