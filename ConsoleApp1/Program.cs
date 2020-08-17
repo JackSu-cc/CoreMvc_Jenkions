@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net.Http.Headers;
 
 namespace ConsoleApp1
@@ -11,13 +13,33 @@ namespace ConsoleApp1
         {
             return 1;
         }
-         
+
     }
     class Program
     {
 
         static void Main(string[] args)
         {
+            List<string> listA = new List<string> { "a", "b", "c", "d", "e" };
+
+            List<string> listB = new List<string> { "a", "b", "f" };
+
+            var str3 = listB.ToArray().Except(listA.ToArray()).Any();
+
+            Console.WriteLine(str3);
+            string expression = "@IsHighRisk=0&&@YearCost<1000000&&((@IsBack=1&&@TCV<50000)||@IsBack=0)";
+
+            expression = expression
+                .Replace("@IsHighRisk", "0")
+                .Replace("@YearCost", "100")
+                .Replace("@IsBack", "1")
+                 .Replace("@TCV", "10");
+
+
+
+            object result = new DataTable().Compute(expression, "");
+            Console.WriteLine(float.Parse(result + ""));
+
             //  string dd = "abcadddd";
 
             //  List<char> li = new List<char>();
@@ -44,12 +66,12 @@ namespace ConsoleApp1
             string dd = "";
             int dds = dd.Pss();
 
-             
+
 
             List<AAA> list = new List<AAA>();
             list.Add(new AAA { Name = "" });
-            list.Where(c=>c.Name.Contains("ss"));
-         
+            list.Where(c => c.Name.Contains("ss"));
+
 
             Console.WriteLine("Hello World!");
 
@@ -71,12 +93,12 @@ namespace ConsoleApp1
             int i = 0;
             Console.WriteLine(i++);
             Console.WriteLine(++i);
-             
+
         }
 
         public class dd<T>
-        { 
-         
+        {
+
         }
 
 
@@ -168,9 +190,12 @@ namespace ConsoleApp1
 
     }
 
-    public class AAA { 
-       public string Name { get; set; }
+    public class AAA
+    {
+        public string Name { get; set; }
     }
+
+
 
 
 }
