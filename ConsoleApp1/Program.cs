@@ -25,11 +25,51 @@ namespace ConsoleApp1
             return null;
         }
     }
+
+
+    public class A
+    {
+        public virtual void Func1(int i)
+        {
+            Console.WriteLine(i);
+        }
+
+        public void Func2(A a)
+        {
+            a.Func1(1);
+            Func1(5);
+        }
+    }
+
+    public class B : A
+    {
+
+        public override void Func1(int i)
+        {
+            base.Func1(i+1);
+        }
+    }
+
     class Program
     {
 
         static void Main(string[] args)
         {
+            #region 继承
+
+            A a = new A();
+            B b = new B();
+            a.Func2(b);//2,5
+            b.Func2(a);//1,6
+
+            #endregion
+
+            #region 委托
+
+            Test_Delegate test = new Test_Delegate();
+
+            #endregion
+
             #region 九九乘法表
             var len = 9;
             string st;
@@ -107,8 +147,8 @@ namespace ConsoleApp1
 
             #endregion
 
-
-
+            #region 继承，this base
+            
             Audi audi = new Audi();
             audi[1] = "A6";
             audi[2] = "A8";
@@ -116,23 +156,25 @@ namespace ConsoleApp1
             audi.Run();
             audi.ShowResult();
 
+            #endregion
+
+            #region 扩展方法
+
             string dd = "";
             int dds = dd.Pss();
-
-
             
-            List<AAA> list = new List<AAA>();
-            list.Add(new AAA { Name = "" });
-            list.Where(c => c.Name.Contains("ss"));
-       
-             
+            #endregion
+
 
             Console.WriteLine("Hello World!");
 
+
+            #region 值类型转换
+             
             //数据类型 float参数后面必须是加 f  不然编译不过去，会被编译器认为是 double
             // decimal 类型如果直接赋值必须加 m  不然编译不过去，会被编译器认为是 double
-            float a = 3.2f;
-            decimal b = 3.2m;
+            float a_float = 3.2f;
+            decimal b_float = 3.2m;
 
             //float 精度不足，会丢失位数
             int a1 = 10000001;
@@ -143,17 +185,21 @@ namespace ConsoleApp1
             short s1 = 1;
             short s2 = 2;
             short s3 = (short)(s1 + s2);
+            #endregion
 
             int i1 = 0;
             Console.WriteLine(i1++);
             Console.WriteLine(++i1);
 
+            #region 异步
+             
             Console.WriteLine("await外面的前面");
 
             Getasync();
 
             Console.WriteLine("await外面的后面");
             Console.ReadKey();
+            #endregion
         }
         public static async void Getasync()
         {
@@ -268,12 +314,9 @@ namespace ConsoleApp1
     }
 
 
-    public class AAA
-    {
-        public string Name { get; set; }
-    }
 
-  
+
+
 
 
 
