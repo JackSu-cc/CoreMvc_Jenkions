@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Net.Http.Headers;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -52,7 +53,9 @@ namespace ConsoleApp1
 
     class Program
     {
+        public delegate void delegatemat();
 
+        public static void Getdelegate() { Console.WriteLine(1 + 1); }
         static void Main(string[] args)
         {
             #region 继承
@@ -95,7 +98,7 @@ namespace ConsoleApp1
 
             #region Lambda Except:listB排除 listA与listB的共有的
 
-            List<string> listA = new List<string> { "a", "b", "c", "d", "e" };
+            List<string> listA = new List<string> { "a", "b", "c", "f","d", "e" };
 
             List<string> listB = new List<string> { "a", "b", "f" };
 

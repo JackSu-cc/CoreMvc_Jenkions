@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.IService.IUserService;
@@ -13,44 +14,36 @@ using Infrastruct.Repository.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Swagger;
 
-namespace CoreMvc
+namespace CoreApl
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
+        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            #region 配置跨域请求
-            var urls = Configuration.GetSection("Cors:AllowOrigins").Value.Split(',');
-            services.AddCors(option => option.AddPolicy("cors",
-                policy =>
-                policy
-                      .WithOrigins(urls)//配置允许请求的站点
-                      .AllowAnyHeader()//允许所有请求头
-                      .AllowAnyMethod()//允许请求类型
-                      .AllowCredentials()//允许携带cookie信息（这个要禁用掉）
-                      ));
-            #endregion
-
-            services.AddControllersWithViews();
+            //添加controller服务(webapi)
+            services.AddControllers();
+            //添加数据库连接
             services.AddDbContext<CoreDemoDBContext>(o =>
             {
                 o.UseSqlServer(Configuration.GetSection("ConnectionStrings:Default").Value);
             });
+
             //注入缓存
             services.AddSingleton<IMemoryCache, MemoryCache>();
 
@@ -61,6 +54,27 @@ namespace CoreMvc
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
 
+            #region 配置Swagger服务 
+            //配置Swagger
+            services.AddSwaggerGen(c =>
+            {
+                var version = "v1";
+                c.SwaggerDoc(version, new OpenApiInfo
+                {
+                    Title = $"{Configuration.GetSection("BasicSettings:apiName").Value} CoreAPI接口文档——dotnetcore 3.1",//编辑标题
+                    Version = version,//版本号
+                    Description = $"{Configuration.GetSection("BasicSettings:apiName").Value} HTTP API V1",//编辑描述
+                    Contact = new OpenApiContact { Name = $"{ Configuration.GetSection("BasicSettings:apiName").Value }-点我给管理员发邮件", Email = "929013002@qq.com" },//编辑联系方式
+                    License = new OpenApiLicense { Name = Configuration.GetSection("BasicSettings:apiName").Value }//编辑许可证
+                });
+                c.OrderActionsBy(o => o.RelativePath);//排列顺序
+                                                      
+                var xmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CoreApl.xml");// 配置接口文档文件路径
+                c.IncludeXmlComments(xmlPath, true); // 把接口文档的路径配置进去。第二个参数表示的是是否开启包含对Controller的注释容纳
+            });
+            #endregion
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,53 +84,14 @@ namespace CoreMvc
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
-            //执行跨域请求的中间件，cors为自定义的跨域请求策略
-            app.UseCors("cors");
-
-            // app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            #region 添加Swagger中间件
 
-            #region 自定义中间件，学习
-            //自定义中间件>>方式1
-            //app.UseMiddleware<Middleware>();
-
-            //自定义中间件>>方式2
-            //app.Use(async (context, next) =>
-            //{
-            //    await context.Response.WriteAsync("<p>假如这个是最后一个啊</p>");
-            //    await next.Invoke();//不加这个，不会执行下一个中间件
-
-            //});
-            //自定义中间件>>方式3
-            //app.Run(async context =>
-            //{
-            //    await context.Response.WriteAsync("<p>最后一个啊</p>");
-            //});
-
+            app.UseSwagger();
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1"); });
             #endregion
-
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
-
-
         }
-
     }
-
 }
