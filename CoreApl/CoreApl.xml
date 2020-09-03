@@ -9,6 +9,12 @@
             登录服务
             </summary>
         </member>
+        <member name="M:CoreApl.LoginController.GetToken">
+            <summary>
+            获取Token
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:CoreApl.LoginController.Get">
             <summary>
             获取基本信息

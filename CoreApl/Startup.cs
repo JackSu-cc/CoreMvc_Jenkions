@@ -2,15 +2,18 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Application.IService.IUserService;
 using Application.Service.UserService;
 using Common.BaseInterfaces.IBaseRepository;
 using Common.BaseInterfaces.IBaseRepository.IRepository;
+using Common.CommonHellper.Ext;
 using Domain.IRepository;
 using Infrastruct.Context;
 using Infrastruct.Repository.BaseRepository;
 using Infrastruct.Repository.User;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -19,8 +22,10 @@ using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
+using Newtonsoft.Json;
+using Common.CommonHellper;
 
 namespace CoreApl
 {
@@ -37,22 +42,61 @@ namespace CoreApl
         public void ConfigureServices(IServiceCollection services)
         {
             //添加controller服务(webapi)
-            services.AddControllers();
+            services.AddControllers().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
             //添加数据库连接
             services.AddDbContext<CoreDemoDBContext>(o =>
             {
                 o.UseSqlServer(Configuration.GetSection("ConnectionStrings:Default").Value);
             });
 
-            //注入缓存
-            services.AddSingleton<IMemoryCache, MemoryCache>();
 
-            //services.AddTransient<>
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            //注入仓储
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
+
+            #region 添加JWT
+            JwtSettings jwtSettings = new JwtSettings();
+            Configuration.Bind("JwtToken", jwtSettings);
+
+            services.AddAuthentication(opertion =>
+            {
+                opertion.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                opertion.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(c =>
+            {
+                //配置JWT参数
+                c.TokenValidationParameters = new TokenValidationParameters
+                {
+                    //是否验证发行人
+                    ValidateIssuer = true,
+                    ValidIssuer = jwtSettings.Issuer,//发行人
+                                                     //是否验证受众人
+                    ValidateAudience = true,
+                    ValidAudience = jwtSettings.Audience,//受众人
+                                                         //是否验证密钥
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(jwtSettings.SecretKey)),
+
+                    ValidateLifetime = true, //验证生命周期
+                    RequireExpirationTime = true, //过期时间
+                };
+                c.Events = new JwtBearerEvents()
+                {
+                    OnChallenge = context =>
+                    {
+                        context.HandleResponse();
+                        var payload = JsonConvert.SerializeObject(new CusResult
+                        {
+                            code = 401,
+                            msg = "很抱歉，您无权访问该接口！",
+                            data = null
+                        });
+                        context.Response.ContentType = "application/json";
+                        context.Response.StatusCode = 200;
+                        context.Response.WriteAsync(payload);
+                        return Task.FromResult(0);
+                    }
+                };
+            });
+            #endregion
+
 
             #region 配置Swagger服务 
             //配置Swagger
@@ -68,13 +112,21 @@ namespace CoreApl
                     License = new OpenApiLicense { Name = Configuration.GetSection("BasicSettings:apiName").Value }//编辑许可证
                 });
                 c.OrderActionsBy(o => o.RelativePath);//排列顺序
-                                                      
+
                 var xmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CoreApl.xml");// 配置接口文档文件路径
                 c.IncludeXmlComments(xmlPath, true); // 把接口文档的路径配置进去。第二个参数表示的是是否开启包含对Controller的注释容纳
             });
             #endregion
 
+            //注入缓存
+            services.AddSingleton<IMemoryCache, MemoryCache>();
 
+            //services.AddTransient<>
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            //注入仓储
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -86,12 +138,17 @@ namespace CoreApl
             }
 
             app.UseRouting();
+            //1.先开启认证
+            app.UseAuthentication();
+            //2.再开启授权
+            app.UseAuthorization();
 
             #region 添加Swagger中间件
 
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1"); });
             #endregion
+     
         }
     }
 }
