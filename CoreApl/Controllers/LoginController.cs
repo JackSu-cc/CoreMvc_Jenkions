@@ -8,24 +8,25 @@ using System.Threading.Tasks;
 using Common.CommonHellper.Ext;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace CoreApl
+namespace CoreApl.Controllers
 {
     /// <summary>
     /// 登录服务
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class LoginController : ControllerBase
     {
-        protected readonly JwtSettings _jwtSettings;
-        public LoginController(JwtSettings jwtSettings)
+        public readonly JwtSettings _jwtSettings;
+        public LoginController(IOptions<JwtSettings> jwtSettings)
         {
-            this._jwtSettings = jwtSettings;
+            this._jwtSettings = jwtSettings.Value;
         }
 
         /// <summary>
@@ -33,7 +34,7 @@ namespace CoreApl
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        //[AllowAnonymous]
+        [AllowAnonymous]
         public IActionResult GetToken()
         {
             //定义许多种的声明Claim,信息存储部分,Claims的实体一般包含用户和一些元数据
@@ -64,18 +65,9 @@ namespace CoreApl
             });
         }
 
-        /// <summary>
-        /// 获取基本信息
-        /// </summary>
-        /// <returns></returns>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
 
         /// <summary>
-        /// 测试post
+        /// sssa
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -83,34 +75,6 @@ namespace CoreApl
         public string Get(int id)
         {
             return "value";
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="value"></param>
-        [HttpPost]
-        public void Post(string value)
-        {
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="value"></param>
-        [HttpPut("{id}")]
-        public void Put(int id, string value)
-        {
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        } 
     }
 }

@@ -26,6 +26,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Common.CommonHellper;
+using Swashbuckle.AspNetCore.Filters;
 
 namespace CoreApl
 {
@@ -42,7 +43,7 @@ namespace CoreApl
         public void ConfigureServices(IServiceCollection services)
         {
             //添加controller服务(webapi)
-            services.AddControllers().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
+            services.AddControllers();//.SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
             //添加数据库连接
             services.AddDbContext<CoreDemoDBContext>(o =>
             {
@@ -52,9 +53,13 @@ namespace CoreApl
 
 
             #region 添加JWT
+
+            services.AddOptions();
+            services.Configure<JwtSettings>(Configuration.GetSection("JwtToken"));
+
             JwtSettings jwtSettings = new JwtSettings();
             Configuration.Bind("JwtToken", jwtSettings);
-
+            
             services.AddAuthentication(opertion =>
             {
                 opertion.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -97,7 +102,6 @@ namespace CoreApl
             });
             #endregion
 
-
             #region 配置Swagger服务 
             //配置Swagger
             services.AddSwaggerGen(c =>
@@ -115,6 +119,20 @@ namespace CoreApl
 
                 var xmlPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "CoreApl.xml");// 配置接口文档文件路径
                 c.IncludeXmlComments(xmlPath, true); // 把接口文档的路径配置进去。第二个参数表示的是是否开启包含对Controller的注释容纳
+
+                c.OperationFilter<AddResponseHeadersFilter>();
+                c.OperationFilter<AppendAuthorizeToSummaryOperationFilter>();
+                // 很重要！这里配置安全校验，和之前的版本不一样
+                c.OperationFilter<SecurityRequirementsOperationFilter>();
+
+                // 开启 oauth2 安全描述，必须是 oauth2 这个单词
+                c.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+                {
+                    Description = "JWT授权(数据将在请求头中进行传输) 直接在下框中输入Bearer {token}（注意两者之间是一个空格）\"",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey
+                });
             });
             #endregion
 
@@ -137,18 +155,23 @@ namespace CoreApl
                 app.UseDeveloperExceptionPage();
             }
 
+          
+            
             app.UseRouting();
             //1.先开启认证
             app.UseAuthentication();
             //2.再开启授权
             app.UseAuthorization();
 
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
             #region 添加Swagger中间件
 
             app.UseSwagger();
             app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1"); });
             #endregion
-     
         }
     }
 }

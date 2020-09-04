@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Service\Application.csproj", "{403E3B58-9146-4301-8640-B62D5235104A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreApl", "CoreApl\CoreApl.csproj", "{3F5F7E53-6072-4A11-AE99-C0EB2DF73114}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreApl", "CoreApl\CoreApl.csproj", "{3F5F7E53-6072-4A11-AE99-C0EB2DF73114}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
