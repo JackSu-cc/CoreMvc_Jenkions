@@ -27,6 +27,14 @@ using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Common.CommonHellper;
 using Swashbuckle.AspNetCore.Filters;
+using MediatR;
+using Domain.Cmds;
+using Domain.CmdHandler;
+using Common.IService;
+using Common.Service;
+using Common.Notice;
+using Domain.Events;
+using Domain.EventHandler;
 
 namespace CoreApl
 {
@@ -145,6 +153,16 @@ namespace CoreApl
             //注入仓储
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
+
+            //增加MediatR
+            services.AddMediatR(typeof(Startup));
+            services.AddScoped<IMediatorService, MediatorService>();
+            services.AddScoped<INotificationHandler<Notification>, Noticehandler>();
+
+            //抛送命令： Mediatr  Request/Response
+            services.AddScoped<IRequestHandler<AddUserCommand, Unit>, UserCmdHandler>();
+            //抛送事件： Notification 
+            services.AddScoped<INotificationHandler<InitUserRoleEvent>, InitUserRoleEventHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

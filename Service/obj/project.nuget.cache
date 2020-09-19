@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1MR1buqNp2++nPOK/WLt/to0YRqlyR0/FnsdsmTERi4ZKk0QEejCR7sw7wajuCu+pQnFzMFPIxRVcm1DFdJrHg==",
+  "dgSpecHash": "0X8oiy2cmaiAyidWU9NdyIbnBHp4auYChLTjuJtUnLVy6iRkrIngpjIDareuDRCJk+78kE839p7zunwzgwWuUQ==",
   "success": true,
   "projectFilePath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Service\\Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\mediatr\\8.1.0\\mediatr.8.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\8.1.0\\mediatr.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"

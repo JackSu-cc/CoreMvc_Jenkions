@@ -85,6 +85,10 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\CoreMvc.pdb
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\CoreMvc.Views.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\CoreMvc.Views.pdb
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\EntityFramework.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\MediatR.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -105,8 +109,11 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.CodeDom.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
@@ -115,6 +122,8 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
@@ -152,4 +161,3 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.pdb
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.genruntimeconfig.cache
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Application.IService.IUserService
 {
@@ -19,7 +20,7 @@ namespace Application.IService.IUserService
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        bool AddUser(UserInfoVM user);
+        Task AddUser(UserInfoVM user);
 
     }
 }

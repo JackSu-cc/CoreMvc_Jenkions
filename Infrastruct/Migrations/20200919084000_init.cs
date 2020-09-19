@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Infrastruct.Migrations
 {
-    public partial class Initial : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,6 +17,7 @@ namespace Infrastruct.Migrations
                     UserName = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
+                    ActiveFlag = table.Column<int>(nullable: false),
                     CreateBy = table.Column<string>(nullable: true),
                     CreateTime = table.Column<DateTime>(nullable: true),
                     UpdateBy = table.Column<string>(nullable: true),

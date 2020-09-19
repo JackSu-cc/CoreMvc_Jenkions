@@ -21,22 +21,27 @@
 using Application.IService.IUserService;
 using Application.ViewModel;
 using Common.BaseInterfaces.IBaseRepository;
+using Common.IService;
+using Domain.Cmds;
 using Domain.IRepository;
 using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Application.Service.UserService
 {
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        private readonly IUnitOfWork _unitOfWork;
-        public UserService(IUserRepository userRepository,IUnitOfWork unitOfWork)
+        private readonly IMediatorService _mediator;
+        public UserService(
+            IUserRepository userRepository,
+            IMediatorService mediator)
         {
             this._userRepository = userRepository;
-            this._unitOfWork = unitOfWork;
+            this._mediator = mediator;
         }
 
 
@@ -47,10 +52,10 @@ namespace Application.Service.UserService
         /// <returns></returns>
         public UserInfoVM FindUserInfo(long Id)
         {
-             
+
             var model = _userRepository.Find(Id);
             if (model != null)
-            { 
+            {
                 return new UserInfoVM()
                 {
                     ID = model.ID,
@@ -60,26 +65,21 @@ namespace Application.Service.UserService
                     Password = model.Password
                 };
             }
-            return null; 
+            return null;
         }
 
-        public bool AddUser(UserInfoVM user)
+        public async Task AddUser(UserInfoVM user)
         {
-            UserInfo userInfo = new UserInfo()
+            AddUserCommand userInfo = new AddUserCommand()
             {
-                ActiveFlag = 1,
                 CreateBy = "cc",
-                CreateTime = DateTime.Now,
                 Email = user.Email,
                 UserCode = user.UserCode,
                 UserName = user.UserName,
                 Password = user.Password
-
             };
-            _userRepository.Add(userInfo);
-            _unitOfWork.Commit();
-            
-            return true;
+
+            await this._mediator.Send<AddUserCommand>(userInfo);
         }
     }
 }
