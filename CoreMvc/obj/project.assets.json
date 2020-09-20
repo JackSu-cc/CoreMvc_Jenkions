@@ -2514,11 +2514,12 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "HZiP0DwTHJ+C+rdFqP47nBYUh5283kcwXIGY2zOVVhsJmVI/2tYiX2zNRdjRQRHsTox58Ydkec6h0pWSh8wAsw==",
+      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -2566,7 +2567,7 @@
       ]
     },
     "System.Configuration.ConfigurationManager/4.5.0": {
-      "sha512": "+2SYYKwbN0n+9SrBanflZdaVleFkytEfTNzOu+f3SK0vROMMrorpw1UJyHJQ1ZooughRxPmLj8Fh5N2tSe7sdA==",
+      "sha512": "UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
       "type": "package",
       "path": "system.configuration.configurationmanager/4.5.0",
       "files": [
@@ -3385,7 +3386,7 @@
       ]
     },
     "System.Reflection.Emit/4.3.0": {
-      "sha512": "vkUFFGejarllQQ8RKkdfuBUQpVlTR9HMDEawKOBDajOSGN08Bz8EjC0zi2fcE7RXQikLbEb1WYJQP3So8mmIGA==",
+      "sha512": "228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
       "type": "package",
       "path": "system.reflection.emit/4.3.0",
       "files": [
@@ -3466,7 +3467,7 @@
       ]
     },
     "System.Reflection.Emit.Lightweight/4.3.0": {
-      "sha512": "rVivBylr0ISQegifkgJvo4mLdk651qB8lBS1UKg6xgRW8yo0Enwpu5OpYz+we6n9go97QaMdzl/wGafPGrKUNQ==",
+      "sha512": "oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
       "type": "package",
       "path": "system.reflection.emit.lightweight/4.3.0",
       "files": [
@@ -4333,7 +4334,7 @@
       ]
     },
     "System.Security.Cryptography.ProtectedData/4.5.0": {
-      "sha512": "s/MFK8BvgtejZj5a8qAPDXEGBtWkpFX98qwQP/wqVa9CgIC7LrKHxDFdlN5x6afGAb0ZVBVGIZlCdBLnO2QjZw==",
+      "sha512": "wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
       "type": "package",
       "path": "system.security.cryptography.protecteddata/4.5.0",
       "files": [
@@ -5185,23 +5186,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\cc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\CoreMvc\\CoreMvc.csproj",
+      "projectUniqueName": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\CoreMvc\\CoreMvc.csproj",
       "projectName": "CoreMvc",
-      "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\CoreMvc\\CoreMvc.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\CoreMvc\\obj\\",
+      "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\CoreMvc\\CoreMvc.csproj",
+      "packagesPath": "C:\\Users\\cc\\.nuget\\packages\\",
+      "outputPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\CoreMvc\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5214,11 +5211,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj": {
-              "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj"
+            "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj": {
+              "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj"
             },
-            "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Service\\Application.csproj": {
-              "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Service\\Application.csproj"
+            "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Service\\Application.csproj": {
+              "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Service\\Application.csproj"
             }
           }
         }
@@ -5265,7 +5262,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

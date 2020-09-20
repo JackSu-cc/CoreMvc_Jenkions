@@ -153,3 +153,4 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.pdb
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.genruntimeconfig.cache
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
