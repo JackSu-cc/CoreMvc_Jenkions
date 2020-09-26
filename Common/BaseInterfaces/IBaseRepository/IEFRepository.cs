@@ -21,10 +21,22 @@ namespace Common.BaseInterfaces.IBaseRepository.IRepository
         void Add(TEntity entity);
 
         /// <summary>
+        /// 批量新增
+        /// </summary>
+        /// <param name="entities"></param>
+        void AddRange(List<TEntity> entities);
+
+        /// <summary>
         /// 修改
         /// </summary>
         /// <param name="entity"></param>
         void Update(TEntity entity);
+
+        /// <summary>
+        /// 批量修改
+        /// </summary>
+        /// <param name="entities"></param>
+        void UpdateRange(List<TEntity> entities);
 
         /// <summary>
         /// 删除
@@ -32,6 +44,11 @@ namespace Common.BaseInterfaces.IBaseRepository.IRepository
         /// <param name="entity"></param>
         void Delete(TEntity entity);
 
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="entities"></param>
+        void DeleteRange(List<TEntity> entities);
 
     }
 }

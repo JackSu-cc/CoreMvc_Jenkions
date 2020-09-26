@@ -75,6 +75,32 @@ namespace Infrastruct.Repository.BaseRepository
         {
             _dbContext.Update(entity);
         }
+        /// <summary>
+        /// 批量新增
+        /// </summary>
+        /// <param name="entities"></param>
+        public void AddRange(List<TEntity> entities)
+        {
+            _dbContext.AddRange(entities);
+        }
+
+        /// <summary>
+        /// 批量修改
+        /// </summary>
+        /// <param name="entities"></param>
+        public void UpdateRange(List<TEntity> entities)
+        {
+            _dbContext.UpdateRange(entities);
+        }
+
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="entities"></param>
+        public void DeleteRange(List<TEntity> entities)
+        {
+            _dbContext.RemoveRange(entities);
+        }
 
         #endregion
     }

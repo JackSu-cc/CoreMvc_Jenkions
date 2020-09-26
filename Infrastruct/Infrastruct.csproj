@@ -19,10 +19,27 @@
     <Compile Remove="Migrations\20200628151259_Initial.Designer.cs" />
     <Compile Remove="Migrations\20200628152217_增加有效字段.cs" />
     <Compile Remove="Migrations\20200628152217_增加有效字段.Designer.cs" />
+    <Compile Remove="Migrations\20200926080222_addUserPosition.cs" />
+    <Compile Remove="Migrations\20200926080222_addUserPosition.Designer.cs" />
+    <Compile Remove="Migrations\20200926080428_init.cs" />
+    <Compile Remove="Migrations\20200926080428_init.Designer.cs" />
+    <Compile Remove="Migrations\20200926085221_init.cs" />
+    <Compile Remove="Migrations\20200926085221_init.Designer.cs" />
+    <Compile Remove="Migrations\20200926085705_init.cs" />
+    <Compile Remove="Migrations\20200926085705_init.Designer.cs" />
+    <Compile Remove="Migrations\20200926085935_init.cs" />
+    <Compile Remove="Migrations\20200926085935_init.Designer.cs" />
+    <Compile Remove="Migrations\20200926090720_init.cs" />
+    <Compile Remove="Migrations\20200926090720_init.Designer.cs" />
+    <Compile Remove="Migrations\20200926090928_init.cs" />
+    <Compile Remove="Migrations\20200926090928_init.Designer.cs" />
+    <Compile Remove="Migrations\20200926092645_init.cs" />
+    <Compile Remove="Migrations\20200926092645_init.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">
       <PrivateAssets>all</PrivateAssets>

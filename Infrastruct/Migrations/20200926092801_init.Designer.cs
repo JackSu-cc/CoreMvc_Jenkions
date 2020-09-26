@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastruct.Migrations
 {
     [DbContext(typeof(CoreDemoDBContext))]
-    [Migration("20200919084000_init")]
+    [Migration("20200926092801_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,7 +57,51 @@ namespace Infrastruct.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("UserInfos");
+                    b.ToTable("UserInfo");
+                });
+
+            modelBuilder.Entity("Domain.Models.UserPosition", b =>
+                {
+                    b.Property<long>("PID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CreateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PositionCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PositionName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("PID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("UserPosition");
+                });
+
+            modelBuilder.Entity("Domain.Models.UserPosition", b =>
+                {
+                    b.HasOne("Domain.Models.UserInfo", "UserInfo")
+                        .WithMany("UserPositions")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -8,5 +8,6 @@ namespace Domain.IRepository
 {
     public interface IUserRepository:IEFRepository<UserInfo>
     {
+        void Test1();
     }
 }

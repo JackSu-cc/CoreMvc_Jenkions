@@ -22,16 +22,47 @@ using Domain.IRepository;
 using Domain.Models;
 using Infrastruct.Context;
 using Infrastruct.Repository.BaseRepository;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Infrastruct.Repository.User
 {
     public class UserRepository : EFRepository<UserInfo>, IUserRepository
     {
+        private readonly CoreDemoDBContext _context;
         public UserRepository(CoreDemoDBContext context) : base(context)
         {
+            this._context = context;
+        }
+
+        public void Test1()
+        {
+            var tts1 = _dbContext.UserInfo.Where(c => EF.Functions.Like(c.UserName, "%风%")).ToList();
+
+            var rrr = _dbContext.UserInfo.Where(c => EF.Functions.Like(c.UserName, "%风%")).ToList();
+
+            _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsEnumerable();
+
+            var tt2 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsEnumerable();
+
+            var dds = tt2.FirstOrDefault().UserPositions.FirstOrDefault().PositionName;
+
+            var tt3 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsEnumerable().Select(c=>c.UserName);
+
+            var tt5= _dbContext.UserInfo.Where(c => c.UserCode == "lixl").Select(c=>new{
+                c.UserName,
+                c.UpdateBy,
+                c.UserPositions
+            }).AsEnumerable();
+
+
+            _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsQueryable();
+
+            var tt4 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsQueryable();
+
         }
     }
 }
