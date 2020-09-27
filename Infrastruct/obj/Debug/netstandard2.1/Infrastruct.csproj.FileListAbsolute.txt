@@ -19,7 +19,6 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\bin\Debug\netstanda
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\bin\Debug\netstandard2.1\Domain.pdb
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\bin\Debug\netstandard2.1\Common.pdb
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.csprojAssemblyReference.cache
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.csproj.CoreCompileInputs.cache
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.AssemblyInfoInputs.cache
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.AssemblyInfo.cs
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.csproj.CopyComplete

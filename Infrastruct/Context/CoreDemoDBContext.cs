@@ -38,9 +38,14 @@ namespace Infrastruct.Context
 
         public DbSet<UserInfo> UserInfos { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-             
-        //}
+        /// <summary>
+        /// EF Core 的配置信息
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            //nuget 安装 Proxies 使用延时加载（由EF Core自动执行）
+            optionsBuilder.UseLazyLoadingProxies();
+        }
     }
 }
