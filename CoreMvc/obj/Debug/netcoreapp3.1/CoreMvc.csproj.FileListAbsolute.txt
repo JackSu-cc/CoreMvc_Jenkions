@@ -161,3 +161,20 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.pdb
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\obj\Debug\netcoreapp3.1\CoreMvc.genruntimeconfig.cache
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\EntityFramework.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\MediatR.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Castle.Core.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Consul.dll
+E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll

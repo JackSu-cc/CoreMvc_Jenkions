@@ -44,6 +44,11 @@ namespace Application.Service.UserService
             this._mediator = mediator;
         }
 
+        public void Test1()
+        {
+            _userRepository.Test1();
+        }
+
 
         /// <summary>
         /// 根据主键ID查找用户

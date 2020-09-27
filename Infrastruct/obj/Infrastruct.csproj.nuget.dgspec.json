@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj": {}
+    "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj": {}
   },
   "projects": {
-    "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Common\\Common.csproj": {
+    "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Common\\Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Common\\Common.csproj",
+        "projectUniqueName": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Common\\Common.csproj",
         "projectName": "Common",
-        "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Common\\Common.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Common\\obj\\",
+        "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Common\\Common.csproj",
+        "packagesPath": "C:\\Users\\cc\\.nuget\\packages\\",
+        "outputPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,9 +38,21 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[1.6.1.1, )"
+            },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.0, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",
@@ -66,24 +75,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\DoMain\\Domain.csproj": {
+    "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\DoMain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\DoMain\\Domain.csproj",
+        "projectUniqueName": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\DoMain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\DoMain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\DoMain\\obj\\",
+        "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\DoMain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\cc\\.nuget\\packages\\",
+        "outputPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\DoMain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +102,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Common\\Common.csproj": {
-                "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Common\\Common.csproj"
+              "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Common\\Common.csproj": {
+                "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Common\\Common.csproj"
               }
             }
           }
@@ -116,6 +122,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -128,24 +138,21 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj": {
+    "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj",
+        "projectUniqueName": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj",
         "projectName": "Infrastruct",
-        "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\Infrastruct\\obj\\",
+        "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Infrastruct\\Infrastruct.csproj",
+        "packagesPath": "C:\\Users\\cc\\.nuget\\packages\\",
+        "outputPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\Infrastruct\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -158,8 +165,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\DoMain\\Domain.csproj": {
-                "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\DoMain\\Domain.csproj"
+              "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\DoMain\\Domain.csproj": {
+                "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\DoMain\\Domain.csproj"
               }
             }
           }
@@ -207,7 +214,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

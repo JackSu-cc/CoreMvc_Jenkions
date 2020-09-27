@@ -8,6 +8,10 @@ namespace Application.IService.IUserService
 {
     public interface IUserService
     {
+
+        void Test1();
+
+
         /// <summary>
         /// 根据ID查询用户详情信息
         /// </summary>

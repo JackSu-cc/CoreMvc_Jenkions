@@ -35,6 +35,9 @@ namespace CoreApl.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            _userService.Test1();
+
+
             return Ok();
         }
 

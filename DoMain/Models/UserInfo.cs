@@ -17,13 +17,14 @@
 //******************************************************************/
 using Common.BaseInterfaces;
 using System;
+using System.Collections.Generic;
 
 namespace Domain.Models
 {
     /// <summary>
     /// 用户信息
     /// </summary>
-    public class UserInfo :IAggregateRoot, ICreate, IUpdate
+    public class UserInfo : IAggregateRoot, ICreate, IUpdate
     {
 
         public long ID { get; set; }
@@ -48,6 +49,10 @@ namespace Domain.Models
         /// </summary>
         public string Email { get; set; }
 
+        /// <summary>
+        /// 用户部门
+        /// </summary>
+        public virtual List<UserPosition> UserPositions { get; set; }
 
         #region 基础
         /// <summary>

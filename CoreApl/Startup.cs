@@ -35,6 +35,9 @@ using Common.Service;
 using Common.Notice;
 using Domain.Events;
 using Domain.EventHandler;
+using Common.Consul;
+using ClientDependency.Core;
+using IApplicationLifetime = Microsoft.AspNetCore.Hosting.IApplicationLifetime;
 
 namespace CoreApl
 {
@@ -180,6 +183,9 @@ namespace CoreApl
             app.UseAuthentication();
             //2.ÔÙ¿ªÆôÊÚÈ¨
             app.UseAuthorization();
+
+   
+
 
             app.UseEndpoints(endpoints =>
             {

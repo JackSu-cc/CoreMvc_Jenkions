@@ -36,15 +36,31 @@ namespace Infrastruct.Context
 
         }
 
-        public DbSet<UserInfo> UserInfos { get; set; }
+        #region 用户相关表
 
         /// <summary>
-        /// EF Core 的配置信息
+        /// 用户信息表
+        /// </summary>
+        public DbSet<UserInfo> UserInfo { get; set; }
+
+        /// <summary>
+        /// 用户岗位
+        /// </summary>
+        public DbSet<UserPosition> UserPosition { get; set; }
+
+
+        #endregion
+
+
+
+
+        /// <summary>
+        /// 初始化配置
         /// </summary>
         /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //nuget 安装 Proxies 使用延时加载（由EF Core自动执行）
+            //增加延时加载--使用时关联的表增加 virtual关键字
             optionsBuilder.UseLazyLoadingProxies();
         }
     }
