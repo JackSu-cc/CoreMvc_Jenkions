@@ -24,3 +24,4 @@ D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstanda
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.csproj.CopyComplete
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.dll
 D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.pdb
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Infrastruct\obj\Debug\netstandard2.1\Infrastruct.csproj.CoreCompileInputs.cache

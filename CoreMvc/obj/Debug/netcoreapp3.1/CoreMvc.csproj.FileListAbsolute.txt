@@ -178,3 +178,6 @@ E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\runtimes\win\
 E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Castle.Core.dll
 E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Consul.dll
 E:\Core\GIT学习\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Consul.dll
+D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\CoreMvc\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll

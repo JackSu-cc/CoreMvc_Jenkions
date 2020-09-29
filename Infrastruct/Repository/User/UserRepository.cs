@@ -50,9 +50,10 @@ namespace Infrastruct.Repository.User
 
             var dds = tt2.FirstOrDefault().UserPositions.FirstOrDefault().PositionName;
 
-            var tt3 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsEnumerable().Select(c=>c.UserName);
+            var tt3 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsEnumerable().Select(c => c.UserName);
 
-            var tt5= _dbContext.UserInfo.Where(c => c.UserCode == "lixl").Select(c=>new{
+            var tt5 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").Select(c => new
+            {
                 c.UserName,
                 c.UpdateBy,
                 c.UserPositions

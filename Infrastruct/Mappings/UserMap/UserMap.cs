@@ -44,7 +44,7 @@ namespace Infrastruct.Mappings.UserMap
             builder.Property(c => c.UpdateTime).HasColumnType("datetime");
 
             //一对多关系
-            builder.HasMany(c => c.UserPositions).WithOne(c => c.UserInfo).HasForeignKey(c => c.UserID).HasPrincipalKey(c => c.ID);
+            builder.HasMany(c => c.UserPositions).WithOne(c => c.UserInfo).HasForeignKey(c => c.UserID);
         }
     }
 }
