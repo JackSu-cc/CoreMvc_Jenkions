@@ -31,7 +31,7 @@ namespace Infrastruct.Mappings.UserMap
     {
         public void Configure(EntityTypeBuilder<UserInfo> builder)
         {
-            builder.ToTable(nameof(UserInfo));
+            builder.ToTable(nameof(UserInfo)); 
             builder.HasKey(c => c.ID);
             builder.Property(c => c.UserCode).HasColumnType("nvarchar(50)").HasMaxLength(50).IsRequired(true);
             builder.Property(c => c.UserName).HasColumnType("nvarchar(50)").HasMaxLength(50);
