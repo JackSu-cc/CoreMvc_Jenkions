@@ -1,8 +1,0 @@
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\bin\Debug\netstandard2.0\Common.deps.json
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\bin\Debug\netstandard2.0\Common.dll
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\bin\Debug\netstandard2.0\Common.pdb
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\obj\Debug\netstandard2.0\Common.csproj.CoreCompileInputs.cache
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\obj\Debug\netstandard2.0\Common.AssemblyInfoInputs.cache
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\obj\Debug\netstandard2.0\Common.AssemblyInfo.cs
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\obj\Debug\netstandard2.0\Common.dll
-D:\新建文件夹 (2)\CoreDemo\CoreMvc_Jenkions\Common\obj\Debug\netstandard2.0\Common.pdb
