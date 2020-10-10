@@ -40,6 +40,13 @@ namespace Infrastruct.Repository.User
 
         public void Test1()
         {
+            long[] aa = {1,3,4,5 }; 
+
+            var dd4 = _dbContext.UserInfo.Where(c => aa.Contains(c.ID)).ToList();
+            var dd5 = _dbContext.UserInfo.Find();
+            var dd6 = _dbSet;
+
+
             var tts1 = _dbContext.UserInfo.Where(c => EF.Functions.Like(c.UserName, "%风%")).ToList();
 
             var rrr = _dbContext.UserInfo.Where(c => EF.Functions.Like(c.UserName, "%风%")).ToList();

@@ -100,8 +100,9 @@ namespace ConsoleApp1
 
             List<string> listA = new List<string> { "a", "b", "c", "f","d", "e" };
 
-            List<string> listB = new List<string> { "a", "b", "f" };
+            List<string> listB = new List<string> { "a", "b", "c" };
 
+ 
             var str3 = listB.Except(listA).Any();
 
             Console.WriteLine(str3);
