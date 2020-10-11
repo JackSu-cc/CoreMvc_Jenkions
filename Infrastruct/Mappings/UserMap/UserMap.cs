@@ -31,7 +31,7 @@ namespace Infrastruct.Mappings.UserMap
     {
         public void Configure(EntityTypeBuilder<UserInfo> builder)
         {
-            builder.ToTable(nameof(UserInfo));
+            builder.ToTable(nameof(UserInfo));  
             builder.HasKey(c => c.ID);
             builder.Property(c => c.UserCode).HasColumnType("nvarchar(50)").HasMaxLength(50).IsRequired(true);
             builder.Property(c => c.UserName).HasColumnType("nvarchar(50)").HasMaxLength(50);
@@ -43,8 +43,8 @@ namespace Infrastruct.Mappings.UserMap
             builder.Property(c => c.UpdateBy).HasColumnType("nvarchar(50)").HasMaxLength(50);
             builder.Property(c => c.UpdateTime).HasColumnType("datetime");
 
-            //一对多关系
-            builder.HasMany(c => c.UserPositions).WithOne(c => c.UserInfo).HasForeignKey(c => c.UserID).HasPrincipalKey(c => c.ID);
+            //一对多关系 
+            builder.HasMany(c => c.UserPositions).WithOne(c => c.UserInfo).HasForeignKey(c => c.UserID);
         }
     }
 }

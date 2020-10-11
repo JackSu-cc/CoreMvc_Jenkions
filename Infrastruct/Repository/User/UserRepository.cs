@@ -40,12 +40,12 @@ namespace Infrastruct.Repository.User
 
         public void Test1()
         {
-            var ddr = Find(1);
+            long[] aa = {1,3,4,5 }; 
 
-            var ddr2 = Find(2);
-            var ddr3 = _context.UserInfo.Where(c=>c.ID==1).FirstOrDefault();
+            var dd4 = _dbContext.UserInfo.Where(c => aa.Contains(c.ID)).ToList();
+            var dd5 = _dbContext.UserInfo.Find();
+            var dd6 = _dbSet;
 
-            var ddr4 = _context.UserInfo.FirstOrDefault(c => c.ID == 1);
 
             var tts1 = _dbContext.UserInfo.Where(c => EF.Functions.Like(c.UserName, "%风%")).ToList();
 
@@ -57,9 +57,10 @@ namespace Infrastruct.Repository.User
 
             var dds = tt2.FirstOrDefault().UserPositions.FirstOrDefault().PositionName;
 
-            var tt3 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsEnumerable().Select(c=>c.UserName);
+            var tt3 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").AsEnumerable().Select(c => c.UserName);
 
-            var tt5= _dbContext.UserInfo.Where(c => c.UserCode == "lixl").Select(c=>new{
+            var tt5 = _dbContext.UserInfo.Where(c => c.UserCode == "lixl").Select(c => new
+            {
                 c.UserName,
                 c.UpdateBy,
                 c.UserPositions

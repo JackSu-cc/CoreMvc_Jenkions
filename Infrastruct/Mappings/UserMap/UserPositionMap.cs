@@ -33,9 +33,9 @@ namespace Infrastruct.Mappings.UserMap
         {
             builder.ToTable(nameof(UserPosition));
             builder.HasKey(c => c.PID);
-            builder.Property(c => c.PositionCode).HasColumnType("nvarchar(20)").HasMaxLength(20).IsRequired(true);
+            builder.Property(c => c.PositionCode).HasColumnType("nvarchar(50)").HasMaxLength(20).IsRequired(true);
             builder.Property(c => c.PositionName).HasColumnType("nvarchar(50)").HasMaxLength(50).IsRequired(true);
-            builder.Property(c => c.UserID).HasColumnType("bigint");
+            builder.Property(c => c.UserID).HasColumnType("bigint").IsRequired(true);
 
             builder.Property(c => c.CreateBy).HasColumnType("nvarchar(50)").HasMaxLength(50);
             builder.Property(c => c.CreateTime).HasColumnType("datetime");

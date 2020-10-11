@@ -58,7 +58,7 @@ namespace Domain.CmdHandler
             };
             _userRepository.Add(userInfo);
 
-            if (Commit())
+            if (Commit()) 
             {
                 //执行成功后发送事件
 

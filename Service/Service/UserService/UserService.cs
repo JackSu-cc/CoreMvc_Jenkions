@@ -70,7 +70,7 @@ namespace Application.Service.UserService
                     Password = model.Password
                 };
             }
-            return null;
+            return null; 
         }
 
         public async Task AddUser(UserInfoVM user)
