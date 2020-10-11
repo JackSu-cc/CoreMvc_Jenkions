@@ -15,17 +15,25 @@ namespace CoreMvc.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         
-        private readonly IUserService _userService;
-        public HomeController(ILogger<HomeController> logger, IUserService userService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            this._userService = userService;
+        }
+
+        public class AAA
+        { 
+           public decimal cc1 { get; set; }
         }
 
         public IActionResult Index()
         {
-             
-             
+            AAA aAA = new AAA() { cc1 = (decimal)2.325912 };
+
+          var ddd=  aAA.cc1.ToString("f2");
+
+            var dd2 = Math.Round(aAA.cc1,2);
+
+            var dd3 = String.Format("{0:N2}",aAA.cc1);
             
             return View();
         }

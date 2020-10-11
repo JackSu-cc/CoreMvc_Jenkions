@@ -47,19 +47,19 @@ namespace CoreMvc
             #endregion
 
             services.AddControllersWithViews();
-            services.AddDbContext<CoreDemoDBContext>(o =>
-            {
-                o.UseSqlServer(Configuration.GetSection("ConnectionStrings:Default").Value);
-            });
+            //services.AddDbContext<CoreDemoDBContext>(o =>
+            //{
+            //    o.UseSqlServer(Configuration.GetSection("ConnectionStrings:Default").Value);
+            //});
             //×¢Èë»º´æ
             services.AddSingleton<IMemoryCache, MemoryCache>();
 
             //services.AddTransient<>
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IUserRepository, UserRepository>();
+            //services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<IUserRepository, UserRepository>();
             //×¢Èë²Ö´¢
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
 
         }
 
@@ -112,6 +112,11 @@ namespace CoreMvc
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapAreaControllerRoute(
+                     name:"default2",
+                     areaName:"System",
+                      pattern: "System/{controller=Home}/{action=Index}"
+                    );
             });
 
 

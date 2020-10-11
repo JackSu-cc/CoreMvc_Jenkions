@@ -40,6 +40,13 @@ namespace Infrastruct.Repository.User
 
         public void Test1()
         {
+            var ddr = Find(1);
+
+            var ddr2 = Find(2);
+            var ddr3 = _context.UserInfo.Where(c=>c.ID==1).FirstOrDefault();
+
+            var ddr4 = _context.UserInfo.FirstOrDefault(c => c.ID == 1);
+
             var tts1 = _dbContext.UserInfo.Where(c => EF.Functions.Like(c.UserName, "%风%")).ToList();
 
             var rrr = _dbContext.UserInfo.Where(c => EF.Functions.Like(c.UserName, "%风%")).ToList();
