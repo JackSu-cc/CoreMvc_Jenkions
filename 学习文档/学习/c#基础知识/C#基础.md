@@ -93,7 +93,27 @@
 
    不变 ：当值作为输入又作为输出   public Interface  IList<T>
 
+   
+   
+   `Task和Thread得区别` ：
+   
    Task 使用的线程池，主线程结束后，子线程就已经结束了。
+   
+   `Thread` 类主要用于实现线程的创建以及执行。
+   
+   `Task` 类表示以异步方式执行的单个操作。
+   
+   1、`Task` 是基于 `Thread` 的，是比较高层级的封装，`Task` 最终还是需要 `Thread` 来执行
+   
+   2、`Task` 默认使用后台线程执行，`Thread` 默认使用前台线程
+   
+   3、`Task` 可以有返回值，`Thread` 没有返回值
+   
+   4、`Task` 可以执行后续操作，`Thread` 不能执行后续操作
+   
+   5、`Task` 可取消任务执行，`Thread` 不行
+   
+   6、`Thread` 在父方法上获取不到异常，而 `Task` 可以。
    
    
 
