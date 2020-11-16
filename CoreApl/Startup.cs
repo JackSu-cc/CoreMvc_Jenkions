@@ -157,10 +157,13 @@ namespace CoreApl
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped(typeof(IEFRepository<>), typeof(EFRepository<>));
 
+            #region 增加MediatR
+
             //增加MediatR
             services.AddMediatR(typeof(Startup));
             services.AddScoped<IMediatorService, MediatorService>();
             services.AddScoped<INotificationHandler<Notification>, Noticehandler>();
+            #endregion
 
             //抛送命令： Mediatr  Request/Response
             services.AddScoped<IRequestHandler<AddUserCommand, Unit>, UserCmdHandler>();
