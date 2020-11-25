@@ -58,9 +58,15 @@ namespace ConsoleApp1
         public static void Getdelegate() { Console.WriteLine(1 + 1); }
         static void Main(string[] args)
         {
+            MQ_Test.SendTest();
+
+           var status= TestTry();
+
+            Console.WriteLine(status);
+
             #region 继承
 
-            A a = new A();
+             A a = new A();
             B b = new B();
             a.Func2(b);//2,5
             b.Func2(a);//1,6
@@ -313,6 +319,24 @@ namespace ConsoleApp1
                 base.ShowResult();
                 base.Run();
                 Console.WriteLine("It's audi's result.");
+            }
+        }
+
+        public static bool TestTry()
+        {
+            try
+            {
+                Console.WriteLine("测试");
+                return true;
+             }
+            catch (Exception ex)
+            {
+                Console.WriteLine("异常");
+                return false;
+            }
+            finally
+            {
+                Console.WriteLine("异常");
             }
         }
     }
