@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "fPNHTiZ5SbdDvH9DOzmqFrd9S2LSDnMSWjDH6FgbE4AdaH9WTkppM5Dh6T5E0vaBQJfW8BXGBikflP4s80EBxQ==",
+  "dgSpecHash": "60Dez6MWwOpWoV2B78nFjpdK8HTD4Sp/t8Y+jeaa/c04jC9akGSP6sWbtFuo3ybvf98qpA8w/H0OdQdvqgc86w==",
   "success": true,
   "projectFilePath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\ConsoleApp1\\ConsoleApp1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
