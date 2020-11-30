@@ -77,3 +77,10 @@
 ## Run()
 
 Run()方法执行的也是RunAsync()这个异步方法，内部执行的是启动DI依赖注入所有的服务。
+
+
+
+## Kestrel
+
+是一款基于中间件处理tcp连接的服务器，内置http、websocket、Singir解析中间件。
+

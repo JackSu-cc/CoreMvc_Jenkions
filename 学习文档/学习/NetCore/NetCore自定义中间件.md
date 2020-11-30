@@ -1,5 +1,7 @@
 ### .NetCore 调用自定义中间件
 
+`中间件是组装到应用管道中处理响应请求的软件`
+
 管道运行：先执行Program 创建一个HostBuilder 容器，读取StartUP中的注入服务，读取初始化变量，进入Kastual浏览器，执行Configure 中间件。
 
 .net Core 可以自定义中间件或使用内置的中间件，或引用第三方的中间件。
