@@ -109,23 +109,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\cc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\ConsoleApp1\\ConsoleApp1.csproj",
       "projectName": "ConsoleApp1",
-      "projectPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\ConsoleApp1\\ConsoleApp1.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\新建文件夹 (2)\\CoreDemo\\CoreMvc_Jenkions\\ConsoleApp1\\obj\\",
+      "projectPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\ConsoleApp1\\ConsoleApp1.csproj",
+      "packagesPath": "C:\\Users\\cc\\.nuget\\packages\\",
+      "outputPath": "E:\\Core\\GIT学习\\CoreMvc_Jenkions\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -169,7 +165,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
