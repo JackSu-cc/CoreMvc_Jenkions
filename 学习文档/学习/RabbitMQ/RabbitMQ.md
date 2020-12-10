@@ -20,6 +20,8 @@ RebbitMQ是一个由ELong语言开发的开源的消息队列，是基于AMQP协
 3. 发布订阅（fanout） 消息发送给指定交换机，交换机对应多个队列---》收到消息每个队列都收到一份
 4. 路由模式（direct）  消息发送给交换机携带**routingKey** --》routingKey绑定队列，收到消息后消费
 5. 通配符模式（topic）消息发送给交换机携带**routingKey** --》队列绑定给交换机是一个范围匹配
+                                       *   routingKey：“baidu.*” 只会匹配到 baidu.com             *只能匹配到一个词
+                                       *   routingKey：“baidu.#” 可以匹配到 baidu.com.cn       #可以匹配到多个词
 
 `通配符模式与路由模式的区别：路由是绑定到指定队列，通配符模式是匹配某一范围。`
 
@@ -68,3 +70,14 @@ RebbitMQ是一个由ELong语言开发的开源的消息队列，是基于AMQP协
                   *  自动确认：出队列时自动确认
                   *  手动确认：消息出队列时，手动执行确认方法
 
+
+
+数据持久化
+
+```c#
+      var con = conFactory.CreateConnection();//创建连接
+
+        var chanel = con.CreateModel();//创建通道
+        var dds=chanel.CreateBasicProperties();
+        dds.Persistent = true;//数据持久化（重启服务器也不会丢失队列中的数据）
+```
