@@ -6,6 +6,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\Core\站点\CoreMvc</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\站点\CoreMvc</_PublishTargetUrl>
   </PropertyGroup>
 </Project>

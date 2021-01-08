@@ -70,7 +70,10 @@ RebbitMQ是一个由ELong语言开发的开源的消息队列，是基于AMQP协
                   *  自动确认：出队列时自动确认
                   *  手动确认：消息出队列时，手动执行确认方法
 
-
+```c#
+//告诉broker同一时间只处理一个消息 
+channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+```
 
 数据持久化
 

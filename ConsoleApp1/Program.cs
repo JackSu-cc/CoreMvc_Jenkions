@@ -58,7 +58,7 @@ namespace ConsoleApp1
         public static void Getdelegate() { Console.WriteLine(1 + 1); }
         static void Main(string[] args)
         {
-            MQ_Test.SendTest();
+            //MQ_Test.SendTest();
 
            var status= TestTry();
 
@@ -203,18 +203,18 @@ namespace ConsoleApp1
 
             #region 异步
              
-            Console.WriteLine("await外面的前面");
+            Console.WriteLine("await外面的前面 1");
 
             Getasync();
 
-            Console.WriteLine("await外面的后面");
+            Console.WriteLine("await外面的后面 3");
             Console.ReadKey();
             #endregion
         }
         public static async void Getasync()
         {
             int tt = 0;
-            Console.WriteLine("await后面{0}", tt);
+            Console.WriteLine("await后面{0} 2", tt);
             tt = await Task.Run(() =>
                {
 
@@ -225,8 +225,8 @@ namespace ConsoleApp1
                    }
                    return tt;
                });
-            Console.WriteLine("await后面");
-            Console.WriteLine("await后面{0}", tt);
+            Console.WriteLine("await后面 4");
+            Console.WriteLine("await后面{0} 5", tt);
 
 
         }
